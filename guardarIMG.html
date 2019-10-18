@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+
+ #enviar{ 
+ text-align:center; }
+
+</style>
+</head>
+<body>
+<h2>Subir imagenes</h2>
+<!-- el atributo enctype del form debe valer "multipart/form-data" -->
+<!-- el atributo method del form debe valer "post" -->
+<form name="f1" enctype="multipart/form-data" action="guardarIMG.php" method="post">
+<p><label>Indique directorio donde guardar las imagenes</label><input type="text" name="directorio"></p>
+<p><label>Selecciona archivo: </label><input name="archivo1" type="file"></p>
+<p><label>Selecciona archivo: </label><input name="archivo1" type="file"></p>
+<p id="enviar"><input type="submit" name="Subir"></p>
+<!-- Se fija en el cliente el tamaño máximo en bytes ( no es seguro ) el limite máximo se debe tener el archivo 
+  Se debe controlar también en el servidor (php.ini)
+-->
+<input type="hidden" name="MAX_FILE_SIZE" value="200000" />
+</form>
+</body>
+</html>
